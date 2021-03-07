@@ -1,0 +1,254 @@
+~ An adventure game where the goal is to escape from the monsters and find the treasures in a castle
+start
+	Map mainMap = gamemap();
+	
+
+	string\treasure;
+	addlist(treasure, gold);
+	addlist(treasure, sword);
+	addlist(treasure, emerald);
+	addlist(treasure, jewelry);
+	addlist(treasure, shield);
+
+	string\tool;
+	addlist(tool, gun);
+	addlist(tool, shotgun);
+	addlist(tool, axe);
+	addlist(tool, hook);
+
+	integer wealth = 1000;
+	integer strength = 100;
+	integer i = 0;
+
+	loop( i < 5)
+	{
+		addroom(createmonster(i), treasure, tool);  
+		i = i + 1;	
+	}
+	
+	
+	
+	creteavatar();
+	
+	~ room 1
+	string input;
+	zemout("If you want to quit press 0:");
+	input = zemin();
+	loop(input != 0 or strength <= 0)
+	{
+		zemout("There is magnificent amount of gold. There is also a beginner level monster!!!");
+		zemout("Your wealth: " +  wealth + " Your strength " + wealth);
+		zemout("Give a command: 1 to move direct, 2 to jump, 3 to fight, 4 to eat, 5 to buy, 6 to open door, 7 pickupwealth");
+		integer command = zemin();
+		if(command == 1)
+		{
+			movedirect();	
+		}
+		if(command == 2)
+		{
+			jump();	
+		}
+		if(command == 3)
+		{
+			fight(tool);
+		}
+		if(command == 4)
+		{
+			eat();
+		}
+		if(command == 5)
+		{
+			buy();
+		}
+
+		if(command == 6)
+		{	
+		if(strength > 150 and wealth > 1200)
+		{
+			opendoor();
+		}
+		}
+
+		if(command == 7)
+		{
+			pickupwlt();
+		}
+		zemout("If you want to quit press 0:");
+		input = zemin();
+	}	
+
+  	~ room 2
+	loop(input != 0 or strength <= 0)
+	{
+		zemout("There is magnificent amount of pure silver. There are also 2 avarage level monster!!!");
+		zemout("Your wealth: " +  wealth + " Your strength " + wealth);
+		zemout("Give a command: 1 to move direct, 2 to jump, 3 to fight, 4 to eat, 5 to buy, 6 to open door, 7 pickupwealth");
+		integer command = zemin();
+		if(command == 1)
+		{
+			movedirect();	
+		}
+		if(command == 2)
+		{
+			jump();	
+		}
+		if(command == 3)
+		{
+			fight(tool);
+		}
+		if(command == 4)
+		{
+			eat();
+		}
+		if(command == 5)
+		{
+			buy();
+		}
+
+		if(command == 6)
+		{	
+		if(strength > 200 and wealth > 1400)
+		{
+			opendoor();
+		}
+		}
+
+		if(command == 7)
+		{
+			pickupwlt();
+		}
+		zemout("If you want to quit press 0:");
+		input = zemin();
+	}
+
+  	~ room 3
+	loop(input != 0 or strength <= 0)
+	{
+		zemout("There is extremely huge jewelries. There are also 5 avarage level monster!!!");
+		zemout("Your wealth: " +  wealth + " Your strength " + wealth);
+		zemout("Give a command: 1 to move direct, 2 to jump, 3 to fight, 4 to eat, 5 to buy, 6 to open door, 7 pickupwealth");
+		integer command = zemin();
+		if(command == 1)
+		{
+			movedirect();	
+		}
+		if(command == 2)
+		{
+			jump();	
+		}
+		if(command == 3)
+		{
+			fight(tool);
+		}
+		if(command == 4)
+		{
+			eat();
+		}
+		if(command == 5)
+		{
+			buy();
+		}
+
+		if(command == 6)
+		{	
+		if(strength > 250 and wealth > 1600)
+		{
+			opendoor();
+		}
+		}
+
+		if(command == 7)
+		{
+			pickupwlt();
+		}
+		zemout("If you want to quit press 0:");
+		input = zemin();
+	}
+
+ 	~ room 4
+	loop(input != 0 or strength <= 0)
+	{
+		zemout("There is extreme amount of material to upgrade your weapon. There are also 10 high level monster!!!");
+		zemout("Your wealth: " +  wealth + " Your strength " + wealth);
+		zemout("Give a command: 1 to move direct, 2 to jump, 3 to fight, 4 to eat, 5 to buy, 6 to open door, 7 pickupwealth");
+		integer command = zemin();
+		if(command == 1)
+		{
+			movedirect();	
+		}
+		if(command == 2)
+		{
+			jump();	
+		}
+		if(command == 3)
+		{
+			fight(tool);
+		}
+		if(command == 4)
+		{
+			eat();
+		}
+		if(command == 5)
+		{
+			buy();
+		}
+
+		if(command == 6)
+		{	
+		if(strength > 300 and wealth > 2000)
+		{
+			opendoor();
+		}
+		}
+
+		if(command == 7)
+		{
+			pickupwlt();
+		}
+		zemout("If you want to quit press 0:");
+		input = zemin();
+	}
+	~ room 5
+	loop(input != 0 or strength <= 0)
+	{
+		zemout("There is no treasure you and darkness. There are also 20 high level monster!!!");
+		zemout("Your wealth: " +  wealth + " Your strength " + wealth);
+		zemout("Give a command: 1 to move direct, 2 to jump, 3 to fight, 4 to eat, 5 to buy, 6 to open door, 7 pickupwealth");
+		integer command = zemin();
+		if(command == 1)
+		{
+			movedirect();	
+		}
+		if(command == 2)
+		{
+			jump();	
+		}
+		if(command == 3)
+		{
+			fight(tool);
+		}
+		if(command == 4)
+		{
+			eat();
+		}
+		if(command == 5)
+		{
+			buy();
+		}
+
+		if(command == 6)
+		{	
+		if(strength > 400 and wealth > 3000)
+		{
+			opendoor();
+		}
+		}
+
+		if(command == 7)
+		{
+			pickupwlt();
+		}
+		zemout("If you want to quit press 0:");
+		input = zemin();
+	}
+	zemout(2 * wealth + 3 * strength);

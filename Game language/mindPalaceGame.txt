@@ -1,0 +1,101 @@
+~A mind place game from Sherlock Holmes
+start
+	Map mind = gameMap();
+	integer i =0;
+	loop(i<5){
+		addroom(createmonster(1));
+		i = i + 1;
+	}
+	createavatar();
+	integer wealth = 100;
+	integer mentality = 10;
+~each room have a distractor names as monster
+~if the avatar escape from room without getting caught by monster earns 30 mentality points
+~in order to escape succesfully user should jump correctly
+~in each room user is asked to jump five times and user should jump as the count of the room 
+~ ex. in third room user should jump 3 out of 5
+~if the avatar has more than 100 mentality points at the room 5
+	~~Room1
+	integer jumpCount = 0;
+	string answer="";
+	integer a = 0;
+	loop(a<5){
+		zemout("do you want to jump?(type yes of no)");
+		answer = zemin();
+		if(answer == "yes"){
+			jumpCount = jumpCount + 1;
+		}
+		a = a + 1;
+	}
+	if(jumpCount ==1){
+		mentality = mentality + 30;
+	}
+~~Room2
+	jumpCount = 0;
+	string answer="";
+	integer a = 0;
+	loop(a<5){
+		zemout("do you want to jump?(type yes of no)");
+		answer = zemin();
+		if(answer == "yes"){
+			jumpCount = jumpCount + 1;
+		}
+		a = a + 1;
+	}
+	if(jumpCount ==2){
+		mentality = mentality = 30;
+	}
+~~Room3
+	jumpCount = 0;
+	string answer="";
+	integer a = 0;
+	loop(a<5){
+		zemout("do you want to jump?(type yes of no)");
+		answer = zemin();
+		if(answer == "yes"){
+			jumpCount = jumpCount + 1;
+		}
+		a = a + 1;
+	}
+	if(jumpCount ==3){
+		mentality = mentality = 30;
+	}
+~~Room4
+	jumpCount = 0;
+	string answer="";
+	integer a = 0;
+	loop(a<5){
+		zemout("do you want to jump?(type yes of no)");
+		answer = zemin();
+		if(answer == "yes"){
+			jumpCount = jumpCount + 1;
+		}
+		a = a + 1;
+	}
+	if(jumpCount ==5){
+		mentality = mentality = 30;
+	}
+~~Room5
+	jumpCount = 0;
+	string answer="";
+	integer a = 0;
+	loop(a<5){
+		zemout("do you want to jump?(type yes of no)");
+		answer = zemin();
+		if(answer == "yes"){
+			jumpCount = jumpCount + 1;
+		}
+		a = a + 1;
+	}
+	if(jumpCount ==5){
+		mentality = mentality = 30;
+	}
+
+
+
+
+	if(mentality>=100){
+		zemout("You won the game");
+	}else{
+		zemout("GAME OVER");
+	}
